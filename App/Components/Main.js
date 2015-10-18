@@ -100,6 +100,9 @@ class Main extends React.Component{
     //reroute to the next passing that github information
   }
   render(){
+    var showErr = (
+      this.state.error ? <Text> {this.state.error} </Text> : <View></View>
+    );
     return(
       <View style={styles.mainContainer}>
         <Text style={styles.title}> Seach for a Github user </Text>
@@ -113,6 +116,11 @@ class Main extends React.Component{
           underlayColor="white">
             <Text style={styles.buttonText}> SEARCH </Text>
         </TouchableHighlight>
+        <ActivityIndicatorIOS
+          animating={this.state.isLoading}
+          color='#111'
+          size="large"></ActivityIndicatorIOS>
+        {showErr}
       </View>
     )
   }
