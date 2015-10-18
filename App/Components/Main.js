@@ -53,6 +53,11 @@ var styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: 'stretch',
     justifyContent: 'center'
+  },
+  spinner: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'center'
   }
 })
 
@@ -117,6 +122,7 @@ class Main extends React.Component{
             <Text style={styles.buttonText}> SEARCH </Text>
         </TouchableHighlight>
         <ActivityIndicatorIOS
+          style={styles.spinner}
           animating={this.state.isLoading}
           color='#111'
           size="large"></ActivityIndicatorIOS>
