@@ -122,7 +122,6 @@ class Main extends React.Component{
             <Text style={styles.buttonText}> SEARCH </Text>
         </TouchableHighlight>
         <ActivityIndicatorIOS
-          style={styles.spinner}
           animating={this.state.isLoading}
           color='#111'
           size="large"></ActivityIndicatorIOS>
